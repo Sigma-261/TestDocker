@@ -11,7 +11,8 @@ services:
   server:
     image: ${DOCKER_REGISTRY-}server
     build:
-      dockerfile: Server/Dockerfile
+      context: ./Server
+      dockerfile: Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
     ports: 
@@ -19,7 +20,8 @@ services:
   client:
     image: ${DOCKER_REGISTRY-}client
     build:
-      dockerfile: Client/Dockerfile
+      context: ./Client
+      dockerfile: Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
     ports: 

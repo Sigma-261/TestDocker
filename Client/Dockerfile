@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-ENV ASPNETCORE_URLS="http://+:7070"
+ENV ASPNETCORE_URLS="http://+:1010"
 ENV ASPNETCORE_ENVIRONMENT=Development
 
 WORKDIR /app
