@@ -8,15 +8,6 @@ services:
     ports:
       - 15672:15672
       - 5672:5672
-  server:
-    image: ${DOCKER_REGISTRY-}server
-    build:
-      context: ./Server
-      dockerfile: Dockerfile
-    environment:
-      ASPNETCORE_ENVIRONMENT: "Development"
-    ports: 
-      - "6060:1010"
   client:
     image: ${DOCKER_REGISTRY-}client
     build:
