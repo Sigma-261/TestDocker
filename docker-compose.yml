@@ -11,7 +11,6 @@ services:
   server:
     image: ${DOCKER_REGISTRY-}server
     build:
-      context: .
       dockerfile: Server/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
@@ -20,7 +19,6 @@ services:
   client:
     image: ${DOCKER_REGISTRY-}client
     build:
-      context: .
       dockerfile: Client/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
