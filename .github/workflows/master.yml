@@ -32,7 +32,8 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v4
         with:
-          context: "{{defaultContext}}:mysubdir"
+          context: .
+          file: ./Server/Dockerfile
           push: true
           tags: user/repo:latest
 
