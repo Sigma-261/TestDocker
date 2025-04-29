@@ -35,7 +35,7 @@ jobs:
           context: .
           file: ./Client/Dockerfile
           push: true
-          tags: root/client:latest
+          tags: mikhailsoroko/client:latest
 
       - name: Run Docker Compose
         run: docker-compose up -d
