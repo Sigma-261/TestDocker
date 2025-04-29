@@ -32,7 +32,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./Client
           file: ./Client/Dockerfile
           push: true
           tags: mikhailsoroko/client:latest
