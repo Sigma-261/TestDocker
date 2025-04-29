@@ -5,8 +5,8 @@ ENV ASPNETCORE_ENVIRONMENT=Development
 
 WORKDIR /app
 
-COPY ./Client.csproj .
-RUN dotnet restore ./Client.csproj
+COPY ./Client/Client.csproj .
+RUN dotnet restore Client.csproj
 
 COPY . .
 
