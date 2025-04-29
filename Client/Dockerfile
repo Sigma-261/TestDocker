@@ -10,7 +10,7 @@ RUN dotnet restore Client.csproj
 
 COPY . .
 
-RUN dotnet publish Client.csproj -c Release -o /app/publish
+RUN dotnet publish ./Client/Client.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 
