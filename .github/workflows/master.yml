@@ -38,4 +38,4 @@ jobs:
           tags: mikhailsoroko/client:latest
 
       - name: Run Docker Compose
-        run: docker-compose up -d
+        run: docker compose up -d
